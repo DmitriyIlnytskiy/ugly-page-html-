@@ -1,8 +1,10 @@
 body {
-    background-color: #d5a2df; 
+    background:linear-gradient(to bottom,  #d5a2df, purple);
+    
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 80vh;
+    animation: shakeBackground 0.5s infinite alternate; 
 }
 
 .sliding-element {
@@ -93,3 +95,22 @@ body {
         border-radius: 25%;
     }
 }
+
+@keyframes shakeBackground {
+    0% {
+        transform: translateX(0); 
+    }
+    25% {
+        transform: translateX(-20px); 
+    }
+    50% {
+        transform: translateX(20px); 
+    }
+    75% {
+        transform: translateX(-20px); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+    
